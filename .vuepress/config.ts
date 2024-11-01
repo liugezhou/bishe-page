@@ -1,83 +1,93 @@
-import { defineUserConfig } from "vuepress";
-import recoTheme from "vuepress-theme-reco";
+import { defineUserConfig } from 'vuepress'
+import recoTheme from 'vuepress-theme-reco'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
-  title: "优秀毕设项目",
-  description: "毕设交流",
+  title: '优秀毕设项目',
+  description: '毕设交流',
   bundler: viteBundler(),
   // bundler: webpackBundler(),
   theme: recoTheme({
-    style: "@vuepress-reco/style-default",
-    logo: "/logo.png",
-    author: "liugezhou",
-    authorAvatar: "/head.png",
-    docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
-    docsBranch: "main",
-    docsDir: "example",
-    lastUpdatedText: "",
+    tip: '提示',
+    info: '信息',
+    danger: '危险',
+    warning: '警告',
+    details: '详情',
+    tagsText: '标签',
+    backToHome: '返回首页',
+    categoriesText: '分类',
+    catalogTitle: '页面导航',
+    editLinkText: '编辑当前页面',
+    lastUpdatedText: '最后更新时间',
+    selectLanguageName: '简体中文',
+    notFound: '哇哦，没有发现这个页面！',
+    style: '@vuepress-reco/style-default',
+    logo: '/logo.png',
+    author: 'liugezhou',
+    authorAvatar: '/head.png',
+    // Github的链接
+    // docsRepo:
+    //   'https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp',
+    docsBranch: 'main',
+    docsDir: '/docs',
     // series 为原 sidebar
     series: {
-      "/docs/theme-reco/": [
+      '/docs/theme-reco/': [
         {
-          text: "module one",
-          children: ["home", "theme"],
+          text: 'module one',
+          children: ['home', 'theme'],
         },
         {
-          text: "module two",
-          children: ["api", "plugin"],
+          text: 'module two',
+          children: ['api', 'plugin'],
         },
       ],
     },
     navbar: [
-      { text: "首页", link: "/" },
-      { text: "案例", link: "/categories/reco/1.html" },
-      { text: "标签", link: "/tags/tag1/1.html" },
+      { text: '首页', link: '/' },
+      { text: '案例', link: '/categories/reco/1.html' },
+      { text: '标签', link: '/tags/tag1/1.html' },
       {
-        text: "文档",
-        children: [
-          { text: "vuepress-reco", link: "/docs/theme-reco/theme" },
-          { text: "vuepress-theme-reco", link: "/blogs/other/guide" },
-        ],
+        text: '其它',
+        children: [{ text: '打赏', link: '/docs/others/donate.html' }],
       },
     ],
     // 公告栏
     bulletin: {
       body: [
         {
-          type: "text",
-          content: `🎉🎉🎉 优秀毕设项目更新了，大家可以尽情尝鲜了，并且希望大家在 QQ 群 踊跃反馈使用体验，我会在第一时间响应。`,
-          style: "font-size: 12px;",
+          type: 'text',
+          content: `🎉🎉🎉 优秀毕设项目展示的初版网站搭建成功了，大家可以尽情尝鲜了，有任何毕设相关的问题可以进群交流，或者添加我的微信，我会在第一时间响应。`,
+          style: 'font-size: 12px;',
         },
         {
-          type: "hr",
+          type: 'hr',
         },
         {
-          type: "title",
-          content: "QQ 群",
+          type: 'title',
+          content: 'QQ 群',
         },
         {
-          type: "text",
+          type: 'text',
           content: `
           <ul>
             <li>QQ群：392177763</li>
           </ul>`,
-          style: "font-size: 12px;",
-        },
-         {
-          type: "hr",
+          style: 'font-size: 12px;',
         },
         {
-          type: "title",
-          content: "微信咨询",
+          type: 'hr',
         },
         {
-          type: "text",
+          type: 'title',
+          content: '微信咨询',
+        },
+        {
+          type: 'text',
           content: `
-          <image src="https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/zhangtianzhi.webp"></image>`
-          ,
-          style: "font-size: 12px;",
+          <image src="https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp"></image>`,
+          style: 'font-size: 12px;',
         },
         // {
         //   type: "hr",
@@ -96,14 +106,14 @@ export default defineUserConfig({
         //   style: "font-size: 12px;",
         // },
         {
-          type: "hr",
+          type: 'hr',
         },
         {
-          type: "buttongroup",
+          type: 'buttongroup',
           children: [
             {
-              text: "打赏",
-              link: "/docs/others/donate.html",
+              text: '打赏',
+              link: '/docs/others/donate.html',
             },
           ],
         },
@@ -124,4 +134,4 @@ export default defineUserConfig({
     // },
   }),
   // debug: true,
-});
+})
