@@ -33,21 +33,21 @@ export default defineUserConfig({
     docsDir: '/docs',
     // series 为原 sidebar
     series: {
-      '/docs/theme-reco/': [
+      '/docs/guide/': [
         {
-          text: 'module one',
-          children: ['home', 'theme'],
+          text: '前置知识',
+          children: ['introduce', 'test'],
         },
         {
-          text: 'module two',
-          children: ['api', 'plugin'],
+          text: '安装答疑',
+          children: ['dayi', 'dayi-java'],
         },
       ],
     },
     navbar: [
       { text: '首页', link: '/' },
-      { text: '案例', link: '/categories/reco/1.html' },
-      { text: '标签', link: '/tags/tag1/1.html' },
+      { text: '案例', link: '/categories/vue/1.html' },
+      // { text: '标签', link: '/tags/tag1/1.html' },
       {
         text: '其他',
         children: [{ text: '打赏', link: '/docs/others/donate.html' }],

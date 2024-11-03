@@ -21,7 +21,7 @@ bannerBrand:
   tagline: 这里汇聚了众多优秀毕设项目，为你提供灵感和参考，助你打造更具创意的毕设作品。
   buttons:
     - { text: 指南, link: '/docs/guide/introduce' }
-    - { text: 答疑, link: 'https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp', type: 'plain' }
+    # - { text: 答疑, link: 'https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp', type: 'plain' }
   socialLinks:
     - { icon: 'LogoWechat', link: 'https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp' }
 blog:
