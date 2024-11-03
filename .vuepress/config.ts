@@ -49,7 +49,7 @@ export default defineUserConfig({
       { text: '案例', link: '/categories/reco/1.html' },
       { text: '标签', link: '/tags/tag1/1.html' },
       {
-        text: '其它',
+        text: '其他',
         children: [{ text: '打赏', link: '/docs/others/donate.html' }],
       },
     ],

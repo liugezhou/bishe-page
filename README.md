@@ -6,7 +6,7 @@ modules:
   - Blog
   - MdContent
   - Features
-  - Footer
+  # - Footer
 banner:
   heroText: 优秀毕设项目展示
   tagline: 这里汇聚了众多优秀毕设项目，为你提供灵感和参考，助你打造更具创意的毕设作品。
