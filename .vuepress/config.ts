@@ -4,6 +4,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
+  base:'/bishe-page/',
   title: '优秀毕设项目',
   description: '毕设交流',
   bundler: viteBundler(),
