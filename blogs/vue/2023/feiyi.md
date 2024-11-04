@@ -13,7 +13,7 @@ author: 阿旭
 :::
 
 ## 介绍
->  主要功能包括 **首页展示**、**中国非遗文化展览**、**世界非遗展览**、**非遗论坛**、**周边**、**部分传承人介绍**、**注册登录**、**文创售卖**等大的模块.
+>  主要功能包括 **首页展示**、**中国非遗文化展览**、**世界非遗展览**、**非遗论坛**、**周边**、**部分传承人介绍**、**注册登录**、**文创售卖**等模块.
 
 本设计主要完成的内容有：    
 (1)中国非物质文化遗产的展示。    
@@ -28,4 +28,4 @@ author: 阿旭
 ![非遗文化传承流程图](https://img.liugezhou.online/bishe/feiyi/1.jpg)
 
 ## 主网站展示
-
+<Swiper :items="['https://img.liugezhou.online/bishe/feiyi/web-index.jpg','https://img.liugezhou.online/bishe/feiyi/web-zgfy.jpg','https://img.liugezhou.online/bishe/feiyi/web-sjfy.jpg','https://img.liugezhou.online/bishe/feiyi/web-fylt.jpg','https://img.liugezhou.online/bishe/feiyi/web-flfg.jpg','https://img.liugezhou.online/bishe/feiyi/web-sbzn.jpg','https://img.liugezhou.online/bishe/feiyi/web-ccr.jpg','https://img.liugezhou.online/bishe/feiyi/web-zhoubian.jpg','https://img.liugezhou.online/bishe/feiyi/web-ddgl.jpg','https://img.liugezhou.online/bishe/feiyi/web-dzgl.jpg']"/>
