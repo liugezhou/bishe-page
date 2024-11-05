@@ -10,6 +10,14 @@ export default defineUserConfig({
   bundler: viteBundler(),
   // bundler: webpackBundler(),
   theme: recoTheme({
+    algolia: {
+      appId: 'LDN7P552TT',
+      apiKey: '0661b64bed73a750ce5e35c5c01a144e',
+      indexName: 'pages',
+      // inputSelector: '搜索相关毕设',
+      // algoliaOptions: { 'facetFilters': ["lang:en-Zh"] },
+      // debug: false // Set debug to true if you want to inspect the dropdown
+    },
     locales: {
       '/': {
         lang: 'zh-CN',
