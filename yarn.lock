@@ -1389,7 +1389,7 @@
   dependencies:
     chokidar "^3.6.0"
 
-"@vuepress/plugin-search@2.0.0-rc.55":
+"@vuepress/plugin-search@^2.0.0-rc.55", "@vuepress/plugin-search@2.0.0-rc.55":
   version "2.0.0-rc.55"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-search/-/plugin-search-2.0.0-rc.55.tgz"
   integrity sha512-K+5sw6o0Ftgo3qaHNd4djnDUDOe4sTrmbmnFcTItOG29V3sT+U5h59V5BqukRFyurZdPvTPCw967niWGEGyZAw==

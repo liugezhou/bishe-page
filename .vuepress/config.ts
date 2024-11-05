@@ -2,7 +2,9 @@ import { defineUserConfig } from 'vuepress'
 import recoTheme from 'vuepress-theme-reco'
 import { viteBundler } from '@vuepress/bundler-vite'
 // import { webpackBundler } from '@vuepress/bundler-webpack'
-import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+// import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import { searchPlugin } from '@vuepress/plugin-search'
+
 export default defineUserConfig({
   // base:'/bishe-page/',
   title: '优秀毕设项目',
@@ -19,22 +21,32 @@ export default defineUserConfig({
     },
   },
   plugins: [
+      searchPlugin({
+        locales: {
+          '/': {
+            placeholder: 'Search',
+          },
+          '/zh/': {
+            placeholder: '搜索',
+          },
+        },
+      }),
     //docsearch插件,https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html
-    docsearchPlugin({
-      apiKey: '6d2d2896cc7c52a9e95d58bb1490c45e',
-      indexName: 'pages',
-      appId: 'LDN7P552TT',
-      locales: {
-        '/': {
-          placeholder: '搜索文档',
-          translations: {
-            button: {
-              buttonText: '搜索文档'
-            }
-          }
-        }
-      }
-    })
+    // docsearchPlugin({
+    //   apiKey: '6d2d2896cc7c52a9e95d58bb1490c45e',
+    //   indexName: 'pages',
+    //   appId: 'LDN7P552TT',
+    //   locales: {
+    //     '/': {
+    //       placeholder: '搜索文档',
+    //       translations: {
+    //         button: {
+    //           buttonText: '搜索文档'
+    //         }
+    //       }
+    //     }
+    //   }
+    // })
   ],
   // bundler: webpackBundler(),
   theme: recoTheme({
