@@ -8,6 +8,22 @@ export default defineUserConfig({
   title: '优秀毕设项目',
   description: '毕设交流',
   bundler: viteBundler(),
+  head: [
+    // 添加百度统计
+    [
+      'script',
+      {},
+      `
+         var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?b102e17dcedf0ede8628680519a5229b";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        `,
+    ],
+  ],
   // bundler: webpackBundler(),
   theme: recoTheme({
     locales: {
@@ -27,7 +43,7 @@ export default defineUserConfig({
         editLinkText: '编辑当前页面',
         lastUpdatedText: '最后更新时间',
         selectLanguageName: '简体中文',
-        notFound: '哇哦，没有发现这个页面！'
+        notFound: '哇哦，没有发现这个页面！',
       },
     },
     style: '@vuepress-reco/style-default',
