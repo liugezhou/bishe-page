@@ -1,29 +1,13 @@
 import { defineUserConfig } from 'vuepress'
 import recoTheme from 'vuepress-theme-reco'
 import { viteBundler } from '@vuepress/bundler-vite'
-import { webpackBundler } from '@vuepress/bundler-webpack'
+// import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
   // base:'/bishe-page/',
   title: '优秀毕设项目',
   description: '毕设交流',
   bundler: viteBundler(),
-  head: [
-    // 添加百度统计
-    [
-      'script',
-      {},
-      `
-         var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?b102e17dcedf0ede8628680519a5229b";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-        `,
-    ],
-  ],
   // bundler: webpackBundler(),
   theme: recoTheme({
     locales: {

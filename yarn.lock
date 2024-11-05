@@ -1248,6 +1248,18 @@
     gray-matter "^4.0.3"
     vue "^3.5.12"
 
+"@vuepress/helper@2.0.0-rc.57":
+  version "2.0.0-rc.57"
+  resolved "https://registry.npmmirror.com/@vuepress/helper/-/helper-2.0.0-rc.57.tgz"
+  integrity sha512-6tJpiVCMdJ5bu5tvH51o+SIDyQG20kqYBvOPeRRsBVGjp8n0rH6KDGY0xDEkd/HF8mJ9UPqNYvqhsQyI3iKKWQ==
+  dependencies:
+    "@vue/shared" "^3.5.12"
+    "@vueuse/core" "^11.1.0"
+    cheerio "1.0.0"
+    fflate "^0.8.2"
+    gray-matter "^4.0.3"
+    vue "^3.5.12"
+
 "@vuepress/highlighter-helper@2.0.0-rc.54":
   version "2.0.0-rc.54"
   resolved "https://registry.npmmirror.com/@vuepress/highlighter-helper/-/highlighter-helper-2.0.0-rc.54.tgz"
@@ -1290,6 +1302,14 @@
   dependencies:
     "@vuepress/helper" "2.0.0-rc.55"
     "@vueuse/core" "^11.1.0"
+    vue "^3.5.12"
+
+"@vuepress/plugin-baidu-analytics@^2.0.0-rc.57":
+  version "2.0.0-rc.57"
+  resolved "https://registry.npmmirror.com/@vuepress/plugin-baidu-analytics/-/plugin-baidu-analytics-2.0.0-rc.57.tgz"
+  integrity sha512-RyWdqLJrnWRj7iF2K8khzgaWwMu551Ve0ogpcsZZyDazWhLb+r0tRAHDE5jjJoz/Br3dUgFQ5i1fZwk8eM9Igg==
+  dependencies:
+    "@vuepress/helper" "2.0.0-rc.57"
     vue "^3.5.12"
 
 "@vuepress/plugin-container@2.0.0-rc.28":
