@@ -1321,7 +1321,7 @@
     markdown-it "^14.1.0"
     markdown-it-container "^4.0.0"
 
-"@vuepress/plugin-docsearch@2.0.0-rc.55":
+"@vuepress/plugin-docsearch@^2.0.0-rc.55", "@vuepress/plugin-docsearch@2.0.0-rc.55":
   version "2.0.0-rc.55"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-docsearch/-/plugin-docsearch-2.0.0-rc.55.tgz"
   integrity sha512-ped6Wy7ULZmSbEnAm/v9STQMi8Ijl467YBUr3tp2UFt3h5nsLtSbNF8USMIgIQSgUPRMwW4htwT47XqhEdwESg==

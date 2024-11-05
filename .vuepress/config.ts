@@ -2,21 +2,46 @@ import { defineUserConfig } from 'vuepress'
 import recoTheme from 'vuepress-theme-reco'
 import { viteBundler } from '@vuepress/bundler-vite'
 // import { webpackBundler } from '@vuepress/bundler-webpack'
-
+import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 export default defineUserConfig({
   // base:'/bishe-page/',
   title: '优秀毕设项目',
   description: '毕设交流',
   bundler: viteBundler(),
+  locales: {
+    // 键名是该语言所属的子路径
+    // 作为特例，默认语言可以使用 '/' 作为其路径。
+    '/': {
+      lang: 'zh-CN',
+    },
+    '/en/': {
+      lang: 'en-US',
+    },
+  },
+  plugins: [
+    //docsearch插件,https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html
+    docsearchPlugin({
+      apiKey: '6d2d2896cc7c52a9e95d58bb1490c45e',
+      indexName: 'pages',
+      appId: 'LDN7P552TT',
+      locales: {
+        '/': {
+          placeholder: '搜索文档',
+          translations: {
+            button: {
+              buttonText: '搜索文档'
+            }
+          }
+        }
+      }
+    })
+  ],
   // bundler: webpackBundler(),
   theme: recoTheme({
     algolia: {
-      appId: 'LDN7P552TT',
-      apiKey: '0661b64bed73a750ce5e35c5c01a144e',
-      indexName: 'pages',
-      // inputSelector: '搜索相关毕设',
-      // algoliaOptions: { 'facetFilters': ["lang:en-Zh"] },
-      // debug: false // Set debug to true if you want to inspect the dropdown
+      // apiKey: '6d2d2896cc7c52a9e95d58bb1490c45e',
+      // indexName: 'pages',
+      // appId: 'LDN7P552TT',
     },
     locales: {
       '/': {
