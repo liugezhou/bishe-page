@@ -99,8 +99,8 @@ export default defineUserConfig({
     },
     navbar: [
       { text: '首页', link: '/' },
-      { text: '案例', link: '/categories/vue/1.html' },
-      // { text: '标签', link: '/tags/tag1/1.html' },
+      // { text: '分类', link: '/categories/vue/1.html' },
+      { text: '案例', link: '/tags/Vue/1.html' },
       {
         text: '其他',
         children: [{ text: '打赏', link: '/docs/others/donate.html' }],

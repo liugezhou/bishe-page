@@ -1,9 +1,9 @@
 ---
 title: 淘宝商品数据爬虫系统
 date: 2023/12/15
-categories:
-  - Vue
-  - Node
+tags:
+ - Vue
+ - Node
 author: BCE
 ---
 

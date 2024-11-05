@@ -1,7 +1,7 @@
 ---
 title: 非遗文化传承
 date: 2024/03/15
-categories:
+tags:
   - Vue
   - Node
 author: 阿旭
