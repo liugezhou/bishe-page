@@ -4,30 +4,28 @@ import { viteBundler } from '@vuepress/bundler-vite'
 // import { webpackBundler } from '@vuepress/bundler-webpack'
 // import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { searchPlugin } from '@vuepress/plugin-search'
-
+const WechatCard ="https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp"
 export default defineUserConfig({
-  // base:'/bishe-page/',
   title: '优秀毕设项目',
   description: '毕设交流',
   bundler: viteBundler(),
+  head:[
+    [
+      'link', { rel: 'icon', href: '/logo.png' }
+  ]
+  ],
   locales: {
     // 键名是该语言所属的子路径
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     '/': {
       lang: 'zh-CN',
-    },
-    '/en/': {
-      lang: 'en-US',
-    },
+    }
   },
   plugins: [
       searchPlugin({
         locales: {
           '/': {
-            placeholder: 'Search',
-          },
-          '/zh/': {
-            placeholder: '搜索',
+            placeholder: '搜索文档',
           },
         },
       }),
@@ -77,11 +75,11 @@ export default defineUserConfig({
     },
     style: '@vuepress-reco/style-default',
     logo: '/logo.png',
-    author: 'liugezhou',
-    authorAvatar: '/head.png',
+    author: '毕设精选',
+    // authorAvatar: '/head.png',
+    authorAvatar: '/logo.png',
     // Github的链接
-    // docsRepo:
-    //   'https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp',
+    // docsRepo:""
     docsBranch: 'main',
     docsDir: '/docs',
     // series 为原 sidebar
@@ -98,12 +96,15 @@ export default defineUserConfig({
       ],
     },
     navbar: [
-      { text: '首页', link: '/' },
+      { text: '首页', link: '/',icon: 'IconHome' },
       // { text: '分类', link: '/categories/vue/1.html' },
-      { text: '案例', link: '/tags/Vue/1.html' },
+      { text: '案例', link: '/tags/Vue/1.html',icon:'IconFire' },
       {
         text: '其他',
-        children: [{ text: '打赏', link: '/docs/others/donate.html' }],
+        icon:'IconOther',
+        children: [{ text: '咨询', link: WechatCard},
+          { text: '打赏', link: '/docs/others/donate.html'}
+        ],
       },
     ],
     // 公告栏
@@ -139,7 +140,7 @@ export default defineUserConfig({
         {
           type: 'text',
           content: `
-          <image src="https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp"></image>`,
+          <image src="${WechatCard}"></image>`,
           style: 'font-size: 12px;',
         },
         // {

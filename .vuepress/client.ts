@@ -1,9 +1,19 @@
 import { defineClientConfig } from 'vuepress/client'
 import Swiper from './components/Swiper.vue'
+import IconHome from './components/IconHome.vue'
+import IconFire from './components/IconFire.vue'
+import IconOther from './components/IconOther.vue'
+import IconShang from './components/IconShang.vue'
+import IconWechat from './components/IconWechat.vue'
 
 export default defineClientConfig({
   enhance({ app, router }) {
     app.component('Swiper', Swiper)
+    app.component('IconHome', IconHome)
+    app.component('IconFire', IconFire)
+    app.component('IconOther', IconOther)
+    app.component('IconShang', IconShang)
+    app.component('IconWechat', IconWechat)
     if (typeof window !== 'undefined') {
       // 百度统计代码
       const hm = document.createElement('script')
