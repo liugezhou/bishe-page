@@ -87,11 +87,11 @@ export default defineUserConfig({
       '/docs/guide/': [
         {
           text: '前置知识',
-          children: ['introduce', 'test'],
+          children: ['introduce', 'process'],
         },
         {
           text: '安装答疑',
-          children: ['dayi', 'dayi-java'],
+          children: ['dayi', 'dayi1'],
         },
       ],
     },

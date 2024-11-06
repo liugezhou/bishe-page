@@ -22,7 +22,7 @@ author: BCE
 
 ## 主网站展示
 
-<Swiper :items="['https://img.liugezhou.online/taobao/web-spxx.jpg','https://img.liugezhou.online/taobao/web-spxx2.jpg','https://img.liugezhou.online/taobao/web-xlyc1.jpg','https://img.liugezhou.online/taobao/web-tjtb.jpg','https://img.liugezhou.online/taobao/web-tjtb2.jpg','https://img.liugezhou.online/taobao/web-qttb1.jpg','https://img.liugezhou.online/taobao/web-qttb2.jpg']"/>
+<Swiper :items="['https://img.liugezhou.online/bishe/taobao/web-spxx.jpg','https://img.liugezhou.online/bishe/taobao/web-spxx2.jpg','https://img.liugezhou.online/bishe/taobao/web-xlyc1.jpg','https://img.liugezhou.online/bishe/taobao/web-tjtb.jpg','https://img.liugezhou.online/bishe/taobao/web-tjtb2.jpg','https://img.liugezhou.online/bishe/taobao/web-qttb1.jpg','https://img.liugezhou.online/bishe/taobao/web-qttb2.jpg']"/>
 
 
 ## 运行环境
