@@ -7,3 +7,4 @@
   - 后期每个项目添加视频、小红书和b站
   - 前端和后端项目的 图片展示
 6. 项目短链接地址1：https://reurl.cc/Yq2QeD
+7. 微信名片：https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp

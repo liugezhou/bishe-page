@@ -1,13 +1,14 @@
 import { defineUserConfig } from 'vuepress'
 import recoTheme from 'vuepress-theme-reco'
 import { viteBundler } from '@vuepress/bundler-vite'
+import { RecoThemeData } from 'vuepress-theme-reco/lib/types'
 // import { webpackBundler } from '@vuepress/bundler-webpack'
 // import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { searchPlugin } from '@vuepress/plugin-search'
 const WechatCard ="https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp"
 export default defineUserConfig({
-  title: '优秀毕设项目',
-  description: '毕设交流',
+  title: '优秀毕设精选',
+  description: '优秀毕设精选交流',
   bundler: viteBundler(),
   head:[
     [
@@ -53,6 +54,9 @@ export default defineUserConfig({
       // indexName: 'pages',
       // appId: 'LDN7P552TT',
     },
+    primaryColor: '#3aa675',// 自定义主题颜色 '#3aa675' '#e6a23c'
+    colorMode: 'auto', // dark, light, 默认 auto
+    colorModeSwitch: true, // 是否展示颜色模式开关，默认 true
     locales: {
       '/': {
         lang: 'zh-CN',
@@ -120,13 +124,14 @@ export default defineUserConfig({
         },
         {
           type: 'title',
-          content: 'QQ 群',
+          content: '社群',
         },
         {
           type: 'text',
           content: `
           <ul>
             <li>QQ群：392177763</li>
+            <li>微信号：enjoying-day</li>
           </ul>`,
           style: 'font-size: 12px;',
         },
@@ -143,22 +148,6 @@ export default defineUserConfig({
           <image src="${WechatCard}"></image>`,
           style: 'font-size: 12px;',
         },
-        // {
-        //   type: "hr",
-        // },
-        // {
-        //   type: "title",
-        //   content: "GitHub",
-        // },
-        // {
-        //   type: "text",
-        //   content: `
-        //   <ul>
-        //     <li><a href="https://github.com/vuepress-reco/vuepress-theme-reco-next/issues">Issues<a/></li>
-        //     <li><a href="https://github.com/vuepress-reco/vuepress-theme-reco-next/discussions/1">Discussions<a/></li>
-        //   </ul>`,
-        //   style: "font-size: 12px;",
-        // },
         {
           type: 'hr',
         },
@@ -173,6 +162,12 @@ export default defineUserConfig({
         },
       ],
     },
+    socialLinks: [
+      {
+        icon: 'IconWechat',
+        link: 'https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp'
+      }
+    ],
     // commentConfig: {
     //   type: 'valine',
     //   // options 与 1.x 的 valineConfig 配置一致

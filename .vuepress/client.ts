@@ -5,6 +5,7 @@ import IconFire from './components/IconFire.vue'
 import IconOther from './components/IconOther.vue'
 import IconShang from './components/IconShang.vue'
 import IconWechat from './components/IconWechat.vue'
+import ImageView from './components/ImageView.vue'
 
 export default defineClientConfig({
   enhance({ app, router }) {
@@ -14,6 +15,7 @@ export default defineClientConfig({
     app.component('IconOther', IconOther)
     app.component('IconShang', IconShang)
     app.component('IconWechat', IconWechat)
+    app.component('ImageView', ImageView)
     if (typeof window !== 'undefined') {
       // 百度统计代码
       const hm = document.createElement('script')

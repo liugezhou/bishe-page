@@ -1,6 +1,6 @@
 ---
-title: 非遗文化传承
-date: 2024/03/15
+title: 非遗文化传承官网和管理端搭建
+date: 2024/11/02
 tags:
   - Vue
   - Node

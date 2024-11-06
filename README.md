@@ -22,11 +22,6 @@ bannerBrand:
   buttons:
     - { text: 案例, link: '/tags/Vue/1.html' }
     - { text: 指南, link: '/docs/guide/introduce', type: 'plain' }
-  socialLinks:
-    - { icon: 'LogoWechat', link: 'https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp' }
-blog:
-  socialLinks:
-    - { icon: 'LogoWechat', link: 'https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp' }
 footer:
   startYear: 2018
 features:

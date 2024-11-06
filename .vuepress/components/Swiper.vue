@@ -13,7 +13,7 @@ import {
   Pagination,
 } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -63,6 +63,9 @@ const props = withDefaults(defineProps<Props>(), {
   pauseOnMouseEnter: false,
   swipe: true,
 })
+
+const showPreview = ref(false)
+const currentPreviewIndex = ref(0)
 
 const slideList = computed<SlideItem[]>(() => {
   return props.items?.map((link) => {
@@ -134,6 +137,33 @@ function onSwiper(swiper: SwiperType) {
     swiper.el.onmouseleave = () => swiper.autoplay.start()
   }
 }
+
+function openPreview(index: number) {
+  if (!slideList.value[index].href) {
+    currentPreviewIndex.value = index
+    showPreview.value = true
+  }
+}
+
+function closePreview() {
+  showPreview.value = false
+}
+
+function prevImage() {
+  if (currentPreviewIndex.value > 0) {
+    currentPreviewIndex.value--
+  } else {
+    currentPreviewIndex.value = slideList.value.length - 1
+  }
+}
+
+function nextImage() {
+  if (currentPreviewIndex.value < slideList.value.length - 1) {
+    currentPreviewIndex.value++
+  } else {
+    currentPreviewIndex.value = 0
+  }
+}
 </script>
 
 <template>
@@ -160,9 +190,22 @@ function onSwiper(swiper: SwiperType) {
         <a v-if="item.href" :href="item.href" target="_blank" rel="noopener noreferrer" class="swiper-slide-link no-icon">
           <img class="swiper-slide-img" :src="item.link" :alt="item.alt" loading="lazy">
         </a>
-        <img v-else class="swiper-slide-img" :src="item.link" :alt="item.alt" loading="lazy">
+        <div v-else class="swiper-slide-wrapper" @click="openPreview(index)">
+          <img class="swiper-slide-img" :src="item.link" :alt="item.alt" loading="lazy">
+          <div class="preview-hint">点击预览</div>
+        </div>
       </SwiperSlide>
     </Swiper>
+
+    <!-- 图片预览模态框 -->
+    <div v-if="showPreview" class="preview-modal" @click.self="closePreview">
+      <div class="preview-content">
+        <img :src="slideList[currentPreviewIndex].link" :alt="slideList[currentPreviewIndex].alt">
+        <button class="preview-close" @click="closePreview">×</button>
+        <button class="preview-prev" @click="prevImage">‹</button>
+        <button class="preview-next" @click="nextImage">›</button>
+      </div>
+    </div>
   </ClientOnly>
 </template>
 
@@ -176,11 +219,33 @@ function onSwiper(swiper: SwiperType) {
   height: 100%;
 }
 
+.swiper-slide-wrapper {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+}
+
+.preview-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.swiper-slide-wrapper:hover .preview-hint {
+  opacity: 1;
+}
+
 .swiper-slide-img {
   width: 100%;
   height: 100%;
   cursor: default !important;
-
   object-fit: cover;
 }
 
@@ -202,5 +267,70 @@ function onSwiper(swiper: SwiperType) {
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
+}
+
+.preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+}
+
+.preview-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.preview-close,
+.preview-prev,
+.preview-next {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 16px;
+  font-size: 24px;
+  transition: background 0.3s;
+}
+
+.preview-close:hover,
+.preview-prev:hover,
+.preview-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.preview-close {
+  top: -40px;
+  right: -40px;
+  border-radius: 50%;
+}
+
+.preview-prev,
+.preview-next {
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px 24px;
+}
+
+.preview-prev {
+  left: -60px;
+}
+
+.preview-next {
+  right: -60px;
 }
 </style>
