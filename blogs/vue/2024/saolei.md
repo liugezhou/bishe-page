@@ -31,7 +31,9 @@ tags:
 <ImageView url="https://img.liugezhou.online/bishe/saolei/saolei.png" :width="800" :height="800" fit="contain"/>
 
 ## 三、项目预览
-TODO
+<ImageView url="https://img.liugezhou.online/bishe/saolei/saolei2.png" :width="800" :height="800" />
+
+<ImageView url="https://img.liugezhou.online/bishe/saolei/saolei3.png" :width="800" :height="800" />
 
 ## 四、运行环境
 :::warning

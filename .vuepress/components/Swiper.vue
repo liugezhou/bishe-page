@@ -234,7 +234,7 @@ function nextImage() {
   color: white;
   padding: 8px 16px;
   border-radius: 4px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s;
 }
 
@@ -275,7 +275,7 @@ function nextImage() {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -305,6 +305,9 @@ function nextImage() {
   padding: 16px;
   font-size: 24px;
   transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .preview-close:hover,
@@ -314,9 +317,13 @@ function nextImage() {
 }
 
 .preview-close {
-  top: -40px;
-  right: -40px;
+  top: 10px;
+  right: 10px;
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 30px;
 }
 
 .preview-prev,
@@ -324,13 +331,38 @@ function nextImage() {
   top: 50%;
   transform: translateY(-50%);
   padding: 16px 24px;
+  font-size: 40px;
+  height: 80px;
+  background: rgba(0,0,0, 0.5);
 }
 
 .preview-prev {
-  left: -60px;
+  left: 10px;
 }
 
 .preview-next {
-  right: -60px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .preview-close {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .preview-prev,
+  .preview-next {
+    padding: 12px 16px;
+    font-size: 30px;
+    height: 60px;
+  }
+  
+  .preview-prev {
+    left: 5px;
+  }
+  
+  .preview-next {
+    right: 5px;
+  }
 }
 </style>
