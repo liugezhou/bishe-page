@@ -1,9 +1,9 @@
 ---
-title: 健身房管理系统，一款基于SpringBoot,Sping Data JPA,Shiro,BootStrap,Layui的前后端项目
-date: 2024/11/01
+title: 
+date: 
 tags:
  - 
-author: Cary
+author: 毕设精选
 ---
 
 ::: tip
