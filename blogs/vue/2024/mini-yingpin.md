@@ -33,7 +33,7 @@ author: 毕设精选
 ## 二、主网站展示
 
 ### 小程序端部分展示
-<Swiper :items="['https://img.liugezhou.online/bishe/yingpin/1.png','https://img.liugezhou.online/bishe/yingpin/2.png','https://img.liugezhou.online/bishe/yingpin/3.png']"/>
+<Swiper :height="1200" :width="800" :items="['https://img.liugezhou.online/bishe/yingpin/1.png','https://img.liugezhou.online/bishe/yingpin/2.png','https://img.liugezhou.online/bishe/yingpin/3.png']"/>
 
 ### 后台管理系统部分展示
 <Swiper :items="['https://img.liugezhou.online/bishe/yingpin/4.png','https://img.liugezhou.online/bishe/yingpin/5.png','https://img.liugezhou.online/bishe/yingpin/6.png','https://img.liugezhou.online/bishe/yingpin/7.png','https://img.liugezhou.online/bishe/yingpin/8.png','https://img.liugezhou.online/bishe/yingpin/9.png']"/>

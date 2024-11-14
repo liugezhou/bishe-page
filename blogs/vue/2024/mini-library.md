@@ -31,7 +31,7 @@ author: 毕设精选
 
 ### 小程序端部分展示
 
-<Swiper :items="['https://img.liugezhou.online/bishe/mini-tushu/1.png','https://img.liugezhou.online/bishe/mini-tushu/2.png','https://img.liugezhou.online/bishe/mini-tushu/3.png','https://img.liugezhou.online/bishe/mini-tushu/4.png','https://img.liugezhou.online/bishe/mini-tushu/5.png']"/>
+<Swiper :height="1200" :width="800" :items="['https://img.liugezhou.online/bishe/mini-tushu/1.png','https://img.liugezhou.online/bishe/mini-tushu/2.png','https://img.liugezhou.online/bishe/mini-tushu/3.png','https://img.liugezhou.online/bishe/mini-tushu/4.png','https://img.liugezhou.online/bishe/mini-tushu/5.png']"/>
 
 ### 后台管理系统部分展示
 

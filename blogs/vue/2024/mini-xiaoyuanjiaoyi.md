@@ -32,7 +32,7 @@ author: Cary
 
 ### 小程序端部分展示
 
-<Swiper :items="['https://img.liugezhou.online/bishe/xiaoyuan/1.png','https://img.liugezhou.online/bishe/xiaoyuan/2.png','https://img.liugezhou.online/bishe/xiaoyuan/3.png','https://img.liugezhou.online/bishe/xiaoyuan/4.png','https://img.liugezhou.online/bishe/xiaoyuan/5.png','https://img.liugezhou.online/bishe/xiaoyuan/6.png','https://img.liugezhou.online/bishe/xiaoyuan/7.png']"/>
+<Swiper :height="1200" :width="800" :items="['https://img.liugezhou.online/bishe/xiaoyuan/1.png','https://img.liugezhou.online/bishe/xiaoyuan/2.png','https://img.liugezhou.online/bishe/xiaoyuan/3.png','https://img.liugezhou.online/bishe/xiaoyuan/4.png','https://img.liugezhou.online/bishe/xiaoyuan/5.png','https://img.liugezhou.online/bishe/xiaoyuan/6.png','https://img.liugezhou.online/bishe/xiaoyuan/7.png']"/>
 
 ### 后台管理系统部分展示
 <Swiper :items="['https://img.liugezhou.online/bishe/xiaoyuan/8.png','https://img.liugezhou.online/bishe/xiaoyuan/9.png','https://img.liugezhou.online/bishe/xiaoyuan/10.png','https://img.liugezhou.online/bishe/xiaoyuan/11.png']"/>
