@@ -76,17 +76,30 @@ const slideList = computed<SlideItem[]>(() => {
   }) ?? []
 })
 
-function parseSize(size: number | string) {
-  if (typeof size === 'number') {
-    return `${size}px`
+function parseSize(size: number | string, isMobile: boolean) {
+  if (isMobile) {
+    return '100%';
   }
-  return size
+  if (typeof size === 'number') {
+    return `${size}px`;
+  }
+  return size;
 }
 
+const isMobile = computed(() => {
+  // 这里可以根据你的需求判断是否为移动端
+  // 例如：通过媒体查询、用户代理等方式判断
+  return window.innerWidth < 768; // 假设移动端的宽度小于768px
+});
+
 const styles = computed(() => ({
-  width: parseSize(props.width),
-  height: parseSize(props.height),
-}))
+  width: parseSize(props.width, isMobile.value),
+  height: parseSize(isMobile.value ? parseFloat(parseSize(props.width, isMobile.value)) / 2 : props.height, isMobile.value),
+}));
+// const styles = computed(() => ({
+//   width: parseSize(props.width),
+//   height: parseSize(props.height),
+// }))
 
 const modules = computed<SwiperModule[]>(() => {
   if (props.mode === 'carousel')
