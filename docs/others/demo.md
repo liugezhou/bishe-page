@@ -20,16 +20,11 @@ xxxx项目名
 <Swiper :items="[]"/>
 
 ### 后台管理系统部分展示
+<Swiper :items="[]"/>
 
 ## 三、运行环境
 :::warning
-node版本： 18.19.1    
-IDE工具：   Vscode   
-数据库：     Mysql   
-编程语言：  Node    
-后端框架： Express    
-前端框架： Vue     
-详细技术： HTML+CSS+JS+Node+Mysql+Express+Vue     
+  
 :::
 
 ## 四、主要功能
