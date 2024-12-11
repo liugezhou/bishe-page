@@ -5,7 +5,7 @@ import { RecoThemeData } from 'vuepress-theme-reco/lib/types'
 // import { webpackBundler } from '@vuepress/bundler-webpack'
 // import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { searchPlugin } from '@vuepress/plugin-search'
-const WechatCard ="https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp"
+const WechatCard ="https://img.liugezhou.online/common/wx_ztz.jpg"
 export default defineUserConfig({
   title: '优秀毕设精选',
   description: '优秀毕设精选交流',
@@ -165,7 +165,7 @@ export default defineUserConfig({
     socialLinks: [
       {
         icon: 'IconWechat',
-        link: 'https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp'
+        link: 'https://img.liugezhou.online/common/wx_ztz.jpg'
       }
     ],
     // commentConfig: {

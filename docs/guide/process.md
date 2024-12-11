@@ -308,5 +308,5 @@ date: 2024/11/01
 :::info
 1. 如果你看到了这里，回头再通读几遍，那么毕设的整体流程你应该已经烂熟于心
 2. 这个网站包含大多数项目都是最新的企业级实战项目，可以保证每个项目都在电脑上运行成功，且保证代码答疑
-3. 此毕设项目源码下载，可添加[我的微信](https://jsd.cdn.zzko.cn/gh/liugezhou/picx-images-hosting@master/bishe/liugezhou.webp)，为你发送项目设计源码
+3. 此毕设项目源码下载，可添加[我的微信](https://img.liugezhou.online/common/wx_ztz.jpg)，为你发送项目设计源码
 :::
