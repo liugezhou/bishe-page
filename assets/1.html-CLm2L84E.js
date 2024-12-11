@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app-BqXUREzz.js";const o={};function c(n,r){return a(),t("div")}const s=e(o,[["render",c],["__file","1.html.vue"]]),i=JSON.parse('{"path":"/tags/weixinxiaochengxu/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{s as comp,i as data};
